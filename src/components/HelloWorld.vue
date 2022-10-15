@@ -24,6 +24,10 @@ const count = ref(0)
     >, the official Vue + Vite starter
   </p>
   <p>
+    Also check out
+    <a href="https://github.com/vitejs/vite/tree/main/playground/ssr-vue" target="_blank">ssr-vue</a>, the vite ssr-vue reference project
+  </p>
+  <p>
     Install
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
     in your IDE for a better DX
