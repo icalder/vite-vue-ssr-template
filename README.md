@@ -15,6 +15,18 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
+## How do I use this template to start my own project?
+```
+git clone
+git remote rm origin
+# git remote add origin <url>
+# git push -u origin main
+rm package-lock.json
+s/vite-vue-ssr-template/your-project-name/ in package.json
+s/vite-vue-ssr-template/your-project-name/ in README.md
+npm install
+```
+
 ## SSR Setup Notes
 ### Standard vue-ts Project create
 ```
