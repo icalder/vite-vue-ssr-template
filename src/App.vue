@@ -1,7 +1,10 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
+
+import { useRoute } from 'vue-router';
+
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+const route = useRoute()
 </script>
 
 <template>
@@ -13,7 +16,10 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <router-view/>
+  <hr class="mt-5" />
+  <router-link v-if="route.path != '/'" to="/">Home</router-link>
+  <router-link v-if="route.path != '/about'" to="/about">About</router-link>
 </template>
 
 <style scoped>

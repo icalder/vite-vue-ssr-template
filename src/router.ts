@@ -16,10 +16,6 @@ const routes = Object.keys(pages).map((path) => {
   }
 })
 
-if (routes.length == 0) {
-  routes.push({ path: '/', component: () => import('./App.vue') })
-}
-
 export function createRouter() {
   return _createRouter({
     // use appropriate history implementation for server/client
