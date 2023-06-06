@@ -19,12 +19,12 @@ export async function createServer(
   const resolveUrl = (p: string) => pathToFileURL(resolve(p)).href
 
   const indexProd = isProd
-    ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8')
+    ? fs.readFileSync(resolve('../client/index.html'), 'utf-8')
     : ''
 
   const manifest = isProd
     ? // @ts-ignore
-      (await import(resolveUrl('dist/client/ssr-manifest.json'), { assert: { type: "json" } })).default
+      (await import(resolveUrl('../client/ssr-manifest.json'), { assert: { type: "json" } })).default
     : {}
 
   const app = express()
@@ -57,7 +57,7 @@ export async function createServer(
     app.use((await import('compression')).default())
     app.use(
       '/',
-      (await import('serve-static')).default(resolve('dist/client'), {
+      (await import('serve-static')).default(resolve('../client'), {
         index: false
       })
     )
@@ -76,7 +76,7 @@ export async function createServer(
       } else {
         template = indexProd
         // @ts-ignore
-        render = (await import('./dist/server/entry-server.js')).render
+        render = (await import('../server/entry-server.js')).render
       }
 
       const [appHtml, preloadLinks, initialData] = await render(url, manifest)

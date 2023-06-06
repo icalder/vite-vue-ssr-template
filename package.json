@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "ts-node-esm server.ts",
-    "build": "npm run build:client && npm run build:server",
+    "build": "npm run build:client && npm run build:server && npm run build:express",
     "build:client": "vite build --outDir dist/client --ssrManifest",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.ts",
-    "build:express": "tsc --p ./tsconfig-server.json",
+    "build:express": "tsc --p ./tsconfig-express.json",
     "preview": "vite preview",
-    "serve": "cross-env NODE_ENV=production node server"
+    "serve": "cross-env NODE_ENV=production node dist/express/server"
   },
   "dependencies": {
     "compression": "^1.7.4",
