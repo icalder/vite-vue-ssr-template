@@ -31,6 +31,14 @@ s/vite-vue-ssr-template/your-project-name/ in README.md
 npm install
 ```
 
+## Container build
+```
+podman machine start
+podman build -t <me>/<myapp> .
+podman push <me>/<myapp>
+podman machine stop
+```
+
 ## SSR Setup Notes
 ### Standard vue-ts Project create
 ```
