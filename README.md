@@ -15,6 +15,10 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
+## Known issues
+`npm run build` warning:
+_Module "node:fs" has been externalized for browser compatibility https://github.com/vitejs/vite/issues/5676_
+
 ## How do I use this template to start my own project?
 ```
 git clone
