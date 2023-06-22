@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue + Vuetify" />
 </template>
 
 <script setup lang="ts">

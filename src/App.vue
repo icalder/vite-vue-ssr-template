@@ -15,6 +15,9 @@ const route = useRoute()
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <a href="https://https://vuetifyjs.com/en/" target="_blank">
+      <img src="./assets/vuetify-logo-dark.svg" class="logo vue" alt="Vue logo" />
+    </a>
   </div>
   <router-view/>
   <hr class="mt-5" />

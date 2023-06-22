@@ -17,6 +17,10 @@ const count = ref(0)
     </p>
   </div>
 
+  <v-chip>
+    Hello, I am a Vuetify chip!
+  </v-chip>
+
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"

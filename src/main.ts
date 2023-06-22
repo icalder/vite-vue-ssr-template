@@ -2,6 +2,7 @@ import { createSSRApp } from 'vue'
 import App from './App.vue'
 import { createRouter } from './router'
 import { InitialDataKey } from './util/InjectionKeys'
+import vuetify from './plugins/vuetify'
 
 declare global {
   interface Window { INITIAL_DATA: Record<string, any>; }
@@ -17,5 +18,6 @@ export function createApp() {
   }
   const router = createRouter()
   app.use(router)
+  app.use(vuetify)
   return { app, router }
 }
