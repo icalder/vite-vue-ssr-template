@@ -9,7 +9,7 @@ import { ViteDevServer } from 'vite'
 // dotenv.config()
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD
 
-export async function createServer(
+async function createServer(
   root = process.cwd(),
   isProd = process.env.NODE_ENV === 'production',
   hmrPort?: number
